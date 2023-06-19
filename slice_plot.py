@@ -31,7 +31,7 @@ dz = dz + abs(np.min(dz))
 #Inclicnation correction
 for i, zi in enumerate (dz):
     #print(f'{dz[i]} {(0.132 * dy[i])}  {dy[i]}')
-    dz[i] = dz[i] - (0.135 * dx[i])
+    dz[i] = dz[i] - (0.135 * dy[i])
     #print(f'{dz[i]}')
 
 
@@ -62,6 +62,8 @@ slice_xy = new_point_cloud[slice_mask_xy]
 plt.figure(figsize=(15, 5))
 
 plt.subplot(1, 3, 1)
+#plt.scatter(slice_x[:, 1], slice_x[:, 2], s=1)
+#plt.title('Middle slice in X direction')
 plt.scatter(slice_x[:, 1], slice_x[:, 2], s=1)
 plt.title('Middle slice in X direction')
 
